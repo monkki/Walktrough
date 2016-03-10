@@ -12,7 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if let pageViewController =
+            storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as?
+            PageViewController {
+            self.presentViewController(pageViewController, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
